@@ -6,9 +6,9 @@ function App() {
 
 
   return (
-    <>
+    <div className='bg-color'>
       <RouterProvider router={router} />
-    </>
+    </div>
   )
 }
 

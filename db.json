@@ -1,0 +1,133 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Event Planning and Coordination",
+      "description": "Our comprehensive event planning and coordination services ensure that every detail of your event is meticulously managed. From initial concept and design to execution and follow-up, our experienced planners work closely with you to create a seamless and memorable experience. We handle logistics, scheduling, vendor coordination, and more, so you can focus on enjoying your event.",
+      "image": "event_planning.jpg",
+      "price": "1600",
+      "category": "Planning"
+    },
+    {
+      "id": "2",
+      "title": "Venue Selection and Management",
+      "description": "Finding the perfect venue is crucial for a successful event. Our team provides expert assistance in selecting a venue that meets your needs and budget. We handle negotiations, site visits, and all logistical arrangements, ensuring that the venue is set up exactly as you envision. Our management services include on-site supervision to ensure everything runs smoothly.",
+      "image": "venue_selection.jpg",
+      "price": 1000,
+      "category": "Venue"
+    },
+    {
+      "id": "3",
+      "title": "Catering Services",
+      "description": "Our professional catering services offer a wide range of culinary options to suit any event, from intimate gatherings to large-scale celebrations. We work with top chefs and caterers to provide delicious, high-quality food that meets your specifications. Whether you need a formal sit-down dinner, a casual buffet, or specialized dietary options, we have you covered.",
+      "image": "catering_services.jpg",
+      "price": 2000,
+      "category": "Catering"
+    },
+    {
+      "id": "4",
+      "title": "Audio-Visual Equipment Rental",
+      "description": "Enhance your event with state-of-the-art audio-visual equipment. We offer a full range of equipment rentals, including sound systems, projectors, lighting, and more. Our team provides setup, operation, and technical support to ensure that your presentations, performances, and speeches are executed flawlessly.",
+      "image": "audio_visual.jpg",
+      "price": 1200,
+      "category": "Equipment"
+    },
+    {
+      "id": "5",
+      "title": "Entertainment Booking",
+      "description": "Make your event unforgettable with our entertainment booking services. We connect you with a wide variety of performers, including live bands, DJs, comedians, and specialty acts. Our team handles all aspects of booking and coordination, ensuring that the entertainment aligns with your event's theme and enhances the overall experience for your guests.",
+      "image": "entertainment_booking.jpg",
+      "price": 1800,
+      "category": "Entertainment"
+    },
+    {
+      "id": "6",
+      "title": "Event Marketing and Promotion",
+      "description": "Maximize the reach and impact of your event with our marketing and promotion services. We develop and implement customized marketing strategies that include social media campaigns, email marketing, press releases, and more. Our goal is to attract the right audience and ensure high attendance and engagement.",
+      "image": "event_marketing.jpg",
+      "price": 1300,
+      "category": "Marketing"
+    },
+    {
+      "id": "7",
+      "title": "On-site Event Management",
+      "description": "Our on-site event management services provide peace of mind on the day of your event. Our experienced managers oversee all aspects of the event, from setup to teardown, ensuring that everything runs smoothly and according to plan. We handle any issues that arise, allowing you to focus on enjoying the event and engaging with your guests.",
+      "image": "onsite_management.jpg",
+      "price": 1600,
+      "category": "Management"
+    },
+    {
+      "id": "8",
+      "title": "Photography and Videography",
+      "description": "Capture the special moments of your event with our professional photography and videography services. Our skilled photographers and videographers use the latest equipment to provide high-quality images and videos that you can cherish for years to come. We offer a range of packages to suit different needs and budgets.",
+      "image": "photo_video.jpg",
+      "price": 1400,
+      "category": "Media"
+    },
+    {
+      "id": "9",
+      "title": "Decor and Theming",
+      "description": "Transform your event space with our creative decor and theming services. Our designers work with you to create a cohesive and visually stunning environment that reflects your vision. We provide everything from floral arrangements and lighting to custom props and backdrops, ensuring that your event is unique and memorable.",
+      "image": "decor_theming.jpg",
+      "price": 1100,
+      "category": "Decor"
+    },
+    {
+      "id": "10",
+      "title": "Transportation Services",
+      "description": "Ensure timely and comfortable arrivals for your guests with our organized transportation services. We provide a range of transportation options, including shuttle buses, limousines, and private cars. Our team handles all logistics, ensuring that your guests have a hassle-free experience from start to finish.",
+      "image": "transportation.jpg",
+      "price": 900,
+      "category": "Transport"
+    },
+    {
+      "id": "11",
+      "title": "weqeddas",
+      "price": "43",
+      "category": "Equipment",
+      "description": "sadsadasd"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Planning",
+      "id": "1"
+    },
+    {
+      "title": "Venue",
+      "id": "2"
+    },
+    {
+      "title": "Catering",
+      "id": "3"
+    },
+    {
+      "title": "Equipment",
+      "id": "4"
+    },
+    {
+      "title": "Entertainment",
+      "id": "5"
+    },
+    {
+      "title": "Marketing",
+      "id": "6"
+    },
+    {
+      "title": "Management",
+      "id": "7"
+    },
+    {
+      "title": "Media",
+      "id": "8"
+    },
+    {
+      "title": "Decor",
+      "id": "9"
+    },
+    {
+      "title": "Transport",
+      "id": "10"
+    }
+  ]
+}

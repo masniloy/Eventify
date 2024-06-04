@@ -16,10 +16,10 @@ export default {
 
         }
       },
-      // colors: {
-      //   'color': '#0b1517',
-      //   'color1': '#ca9c5e'
-      // }
+      colors: {
+        'color': '#e6e3dc',
+        // 'color1': '#ca9c5e'
+      }
     },
   },
   plugins: [
