@@ -19,7 +19,7 @@ export default function AddEvents() {
     }, []);
 
     const handleCreateRecipe = async () => {
-        await axios.post("http://localhost:5000/events", formData);
+        await axios.post("https://eventify-server-three.vercel.app/events", formData);
         setShowToast(true);
         setTimeout(() => {
             setShowToast(false);

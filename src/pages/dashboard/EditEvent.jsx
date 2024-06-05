@@ -18,7 +18,7 @@ export default function EditEvent() {
                 setCategories(categoriesData?.data);
             }
 
-            const eventData = await axios.get(`http://localhost:5000/events/${id}`);
+            const eventData = await axios.get(`https://eventify-server-three.vercel.app/events/${id}`);
             if (eventData?.status === 200) {
                 seteventDetails(eventData?.data);
             }
@@ -27,7 +27,7 @@ export default function EditEvent() {
     }, [id]);
 
     const handleUpdateevent = async () => {
-        await axios.patch(`http://localhost:5000/events/${id}`, formData);
+        await axios.patch(`https://eventify-server-three.vercel.app/events/${id}`, formData);
         setShowToast(true);
         setTimeout(() => {
             setShowToast(false);

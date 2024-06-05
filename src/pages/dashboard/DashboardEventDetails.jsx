@@ -11,7 +11,7 @@ export default function DashboardEventDetails() {
     useEffect(() => {
         async function load() {
 
-            const evebtData = await axios.get(`http://localhost:5000/events/${id}`);
+            const evebtData = await axios.get(`https://eventify-server-three.vercel.app/events/${id}`);
             if (evebtData?.status === 200) {
                 setevebtDetails(evebtData?.data);
             }

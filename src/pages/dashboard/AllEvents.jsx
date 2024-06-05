@@ -11,7 +11,7 @@ export default function AllEvents() {
     useEffect(() => {
         async function loadEvents() {
             try {
-                const response = await axios.get("http://localhost:5000/events");
+                const response = await axios.get("https://eventify-server-three.vercel.app/events");
                 if (response.status === 200) {
                     setEvents(response.data);
                 }
@@ -34,7 +34,7 @@ export default function AllEvents() {
 
     const handleConfirmDelete = async () => {
         try {
-            await axios.delete(`http://localhost:5000/events/${eventToDelete._id}`);
+            await axios.delete(`https://eventify-server-three.vercel.app/events/${eventToDelete._id}`);
             setEvents(events.filter(event => event._id !== eventToDelete._id));
             setShowModal(false);
             setShowToast(true);

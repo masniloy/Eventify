@@ -12,7 +12,7 @@ export default function EventDetails() {
     useEffect(() => {
         async function load() {
 
-            const eventData = await axios.get(`http://localhost:5000/events/${id}`);
+            const eventData = await axios.get(`https://eventify-server-three.vercel.app/events/${id}`);
             if (eventData?.status === 200) {
                 seteventDetails(eventData?.data);
             }
