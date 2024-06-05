@@ -33,12 +33,14 @@ export default function AddEvents() {
         const form = e.target.form;
         const id = form.id.value;
         const title = form.title.value;
+        const image = form.image.value;
         const price = form.price.value;
         const category = form.category.value;
         const description = form.description.value;
         const recipeData = {
             id,
             title,
+            image,
             price,
             category,
             description,
@@ -61,13 +63,14 @@ export default function AddEvents() {
                 <div className="bg-white p-8 w-full rounded-lg shadow-lg sm:w-1/2">
                     <h2 className="text-2xl font-semibold mb-2">Add New Event</h2>
                     <form key={formResetKey}>
-                        {/* <div className="mb-4">
-                            <label className="block text-gray-700">Id *</label>
-                            <input required name="id" type="text" placeholder="Id for your product" className="input input-bordered w-full" />
-                        </div> */}
+
                         <div className="mb-4">
                             <label className="block text-gray-700">Title *</label>
                             <input required name="title" type="text" placeholder="Title for your product" className="input input-bordered w-full" />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-700">Image Link *</label>
+                            <input required name="image" type="text" placeholder="Image link for your product" className="input input-bordered w-full" />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="">Category *</label>
@@ -89,7 +92,7 @@ export default function AddEvents() {
                         </div>
                         <div className="flex justify-end">
 
-                            <button onClick={handleAddProductClick} type="button" className="btn bg-color text-white">Add Item</button>
+                            <button onClick={handleAddProductClick} type="button" className="btn bg-color ">Add Item</button>
                         </div>
                     </form>
                 </div>
@@ -102,7 +105,7 @@ export default function AddEvents() {
                         <p>Are you sure you want to add this product?</p>
                         <div className="flex justify-end mt-4">
                             <button onClick={() => setShowModal(false)} className="btn btn-ghost mr-2">Cancel</button>
-                            <button onClick={confirmAddProduct} className="btn bg-color text-white">Confirm</button>
+                            <button onClick={confirmAddProduct} className="btn bg-color ">Confirm</button>
                         </div>
                     </div>
                 </div>

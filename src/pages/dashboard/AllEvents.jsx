@@ -47,12 +47,11 @@ export default function AllEvents() {
     };
 
     return (
-        <div className="overflow-x-auto w-full px-16 py-10 bg-white">
+        <div className="overflow-x-auto h-screen w-full px-16 py-10 bg-white">
             <h1 className="text-2xl mb-4">Manage All Events</h1>
             <table className="table table-zebra">
                 <thead>
                     <tr>
-                        <th>_id</th>
                         <th>Image</th>
                         <th>Title</th>
                         <th>Price</th>
@@ -78,7 +77,7 @@ export default function AllEvents() {
                             <button onClick={handleCancelDelete} className="btn btn-ghost mr-2">
                                 Cancel
                             </button>
-                            <button onClick={handleConfirmDelete} className="btn bg-color text-white">
+                            <button onClick={handleConfirmDelete} className="btn bg-color ">
                                 Confirm
                             </button>
                         </div>

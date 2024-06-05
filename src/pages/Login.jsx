@@ -70,7 +70,7 @@ export default function Login() {
                         <div className="flex items-center justify-between mb-4">
                             <a href="#" className="text-sm text-red-600 hover:underline">forgot password?</a>
                         </div>
-                        <button className="w-full bg-color text-white py-2 rounded-lg hover:bg-color transition duration-200" >
+                        <button className="w-full bg-color py-2 rounded-lg hover:bg-color transition duration-200" >
                             Login
                         </button>
 
@@ -81,14 +81,14 @@ export default function Login() {
                 </div>
 
                 <div className="md:w-2/3 bg-color p-8 flex flex-col justify-center items-center ">
-                    <div className="text-white text-center ">
+                    <div className=" text-center ">
                         {/* <img
                             src={logo} // Replace with your logo path
                             alt="Buggybites Logo"
                             className="w-32 h-32 mx-auto mb-4"
                         /> */}
-                        <h1 className="text-2xl font-bold mb-2">Buggy Bites</h1>
-                        <p className="text-sm text-color1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro dicta eligendi amet? Aspernatur odio dolore aliquam itaque quidem sit. Quasi!</p>
+                        <h1 className="text-2xl font-bold mb-2">Eventify</h1>
+                        <p className="text-sm text-color1">Our platform is designed with simplicity and usability in mind, making it easy for anyone to navigate and use</p>
 
 
                         <p className="mt-10 text-sm">Or Login Using</p>

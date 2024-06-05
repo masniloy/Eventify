@@ -13,6 +13,7 @@ import AllEvents from "../pages/dashboard/AllEvents";
 import AddEvents from "../pages/dashboard/AddEvents";
 import EditEvent from "../pages/dashboard/EditEvent";
 import EventDetails from "../pages/EventDetails";
+import DashboardEventDetails from "../pages/dashboard/DashboardEventDetails";
 
 
 
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
             {
                 path: "events",
                 element: <Events />
-            }
+            },
+            {
+                path: "eventDetails/:id",
+                element: <EventDetails />,
+            },
 
         ]
     },
@@ -75,8 +80,8 @@ const router = createBrowserRouter([
                 element: <EditEvent />,
             },
             {
-                path: "eventDetails/:id",
-                element: <EventDetails />,
+                path: "DashboardEventDetails/:id",
+                element: <DashboardEventDetails />,
             },
         ]
     }

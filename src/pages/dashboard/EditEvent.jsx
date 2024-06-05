@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditEvent() {
-    const { _id } = useParams();
+    const { id } = useParams();
 
-    const [recipeDetails, setRecipeDetails] = useState({});
+    const [eventDetails, seteventDetails] = useState({});
     const [categories, setCategories] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [showToast, setShowToast] = useState(false);
@@ -18,20 +18,20 @@ export default function EditEvent() {
                 setCategories(categoriesData?.data);
             }
 
-            const recipeData = await axios.get(`http://localhost:5000/events/${_id}`);
-            if (recipeData?.status === 200) {
-                setRecipeDetails(recipeData?.data);
+            const eventData = await axios.get(`http://localhost:5000/events/${id}`);
+            if (eventData?.status === 200) {
+                seteventDetails(eventData?.data);
             }
         }
         load();
-    }, [_id]);
+    }, [id]);
 
-    const handleUpdateRecipe = async () => {
-        await axios.patch(`http://localhost:5000/events/${_id}`, formData);
+    const handleUpdateevent = async () => {
+        await axios.patch(`http://localhost:5000/events/${id}`, formData);
         setShowToast(true);
         setTimeout(() => {
             setShowToast(false);
-        }, 3000);
+        }, 5000);
     };
 
     const handleUpdateProductClick = (e) => {
@@ -42,39 +42,39 @@ export default function EditEvent() {
         const price = form.price.value;
         const category = form.category.value;
         const description = form.description.value;
-        const recipeData = {
-            _id,
+        const eventData = {
+            id,
             title,
             price,
             category,
             description,
         };
 
-        setFormData(recipeData);
+        setFormData(eventData);
         setShowModal(true);
     };
 
     const confirmUpdateProduct = async () => {
         setShowModal(false);
-        await handleUpdateRecipe();
+        await handleUpdateevent();
     };
     return (
         <div>
             <div className="sm:flex items-center justify-center min-h-screen bg-gray-100">
                 <div className="bg-white p-8 w-full rounded-lg shadow-lg sm:w-1/2">
-                    <h2 className="text-2xl font-semibold mb-2">Edit Event Details</h2>
-                    <form key={recipeDetails._id}>
+                    <h2 className="text-2xl font-semibold mb-2">Edit Item</h2>
+                    <form key={eventDetails.id}>
                         <div className="mb-4">
                             <label className="block text-gray-700">Title *</label>
-                            <input name="title" type="text" defaultValue={recipeDetails?.title} className="input input-bordered w-full" />
+                            <input name="title" type="text" defaultValue={eventDetails?.title} className="input input-bordered w-full" />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="">Category *</label>
                             <select name="category" className="input input-bordered w-full">
                                 {categories?.map((category) => (
                                     <option
-                                        key={category?._id}
-                                        selected={category?.title === recipeDetails?.category}
+                                        key={category?.id}
+                                        selected={category?.title === eventDetails?.category}
                                         value={category?.title}
                                     >
                                         {category?.title}
@@ -86,7 +86,7 @@ export default function EditEvent() {
                             <label className="block text-gray-700">Description *</label>
                             <textarea
                                 name="description"
-                                defaultValue={recipeDetails?.description}
+                                defaultValue={eventDetails?.description}
                                 className="textarea textarea-bordered w-full"
                             ></textarea>
                         </div>
@@ -95,13 +95,13 @@ export default function EditEvent() {
                             <input
                                 name="price"
                                 type="number"
-                                defaultValue={recipeDetails?.price}
+                                defaultValue={eventDetails?.price}
                                 className="input input-bordered w-full"
                             />
                         </div>
                         <div className="flex justify-end">
 
-                            <button onClick={handleUpdateProductClick} type="button" className="btn bg-color text-white">
+                            <button onClick={handleUpdateProductClick} type="button" className="btn bg-color ">
                                 Update Item
                             </button>
                         </div>
@@ -118,7 +118,7 @@ export default function EditEvent() {
                             <button onClick={() => setShowModal(false)} className="btn btn-ghost mr-2">
                                 Cancel
                             </button>
-                            <button onClick={confirmUpdateProduct} className="btn bg-color text-white">
+                            <button onClick={confirmUpdateProduct} className="btn bg-color ">
                                 Confirm
                             </button>
                         </div>

@@ -21,11 +21,12 @@ export default function Events() {
 
     return (
         <div>
-            <div className="">
+            <div className="my-32">
                 <div className="item-cente flex justify-center">
                     <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12">
                         {events.map((event) => (
                             <EventCards key={event.id} event={event} />
+
                         ))}
                     </div>
                 </div>
