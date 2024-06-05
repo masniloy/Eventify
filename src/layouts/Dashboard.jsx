@@ -38,10 +38,10 @@ export default function Dashboard() {
                                 <Link to={"/dashboard"}>Dashboard </Link>
                             </li>
                             <li className=" border-b mb-2  rounded-l-lg">
-                                <Link to={"/dashboard/allEvents"}>All Food </Link>
+                                <Link to={"/dashboard/allEvents"}>All Event </Link>
                             </li >
                             <li className=" border-b mb-2  rounded-l-lg">
-                                <Link to={"/dashboard/addEvent"}>Add Food</Link>
+                                <Link to={"/dashboard/addEvent"}>Add Event</Link>
                             </li>
                         </div>
                         <div className=" space-y-3">

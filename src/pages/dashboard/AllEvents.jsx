@@ -11,7 +11,7 @@ export default function AllEvents() {
     useEffect(() => {
         async function loadEvents() {
             try {
-                const response = await axios.get("http://localhost:3000/events");
+                const response = await axios.get("http://localhost:5000/events");
                 if (response.status === 200) {
                     setEvents(response.data);
                 }
@@ -34,8 +34,8 @@ export default function AllEvents() {
 
     const handleConfirmDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3000/events/${eventToDelete.id}`);
-            setEvents(events.filter(event => event.id !== eventToDelete.id));
+            await axios.delete(`http://localhost:5000/events/${eventToDelete._id}`);
+            setEvents(events.filter(event => event._id !== eventToDelete._id));
             setShowModal(false);
             setShowToast(true);
             setTimeout(() => {
@@ -47,12 +47,12 @@ export default function AllEvents() {
     };
 
     return (
-        <div className="overflow-x-auto w-full px-16 mt-10">
+        <div className="overflow-x-auto w-full px-16 py-10 bg-white">
             <h1 className="text-2xl mb-4">Manage All Events</h1>
             <table className="table table-zebra">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>_id</th>
                         <th>Image</th>
                         <th>Title</th>
                         <th>Price</th>
@@ -64,7 +64,7 @@ export default function AllEvents() {
                 </thead>
                 <tbody>
                     {events.map(event => (
-                        <EventRow key={event.id} event={event} onDeleteClick={handleDeleteClick} />
+                        <EventRow key={event._id} event={event} onDeleteClick={() => handleDeleteClick(event)} />
                     ))}
                 </tbody>
             </table>

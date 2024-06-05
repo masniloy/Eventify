@@ -19,7 +19,7 @@ export default function AddEvents() {
     }, []);
 
     const handleCreateRecipe = async () => {
-        await axios.post("http://localhost:3000/events", formData);
+        await axios.post("http://localhost:5000/events", formData);
         setShowToast(true);
         setTimeout(() => {
             setShowToast(false);
@@ -59,12 +59,12 @@ export default function AddEvents() {
         <div>
             <div className="sm:flex items-center justify-center min-h-screen bg-gray-100">
                 <div className="bg-white p-8 w-full rounded-lg shadow-lg sm:w-1/2">
-                    <h2 className="text-2xl font-semibold mb-2">Add new item</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Add New Event</h2>
                     <form key={formResetKey}>
-                        <div className="mb-4">
+                        {/* <div className="mb-4">
                             <label className="block text-gray-700">Id *</label>
                             <input required name="id" type="text" placeholder="Id for your product" className="input input-bordered w-full" />
-                        </div>
+                        </div> */}
                         <div className="mb-4">
                             <label className="block text-gray-700">Title *</label>
                             <input required name="title" type="text" placeholder="Title for your product" className="input input-bordered w-full" />

@@ -7,7 +7,7 @@ export default function DashboardHome() {
     const [user] = useAuthState(auth);
 
     return (
-        <div className=" ">
+        <div className=" bg-white h-screen ">
             <div className="flex items-center justify-center  ">
                 <div className="p-10 w-full   ">
                     <div className="flex justify-center">

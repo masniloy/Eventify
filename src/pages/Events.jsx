@@ -8,7 +8,7 @@ export default function Events() {
     useEffect(() => {
         async function load() {
             try {
-                const response = await axios.get("http://localhost:3000/events");
+                const response = await axios.get("http://localhost:5000/events");
                 if (response.status === 200) {
                     setEvents(response.data);
                 }
